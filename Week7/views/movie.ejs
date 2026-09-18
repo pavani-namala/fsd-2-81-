@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Rating System</title>
+</head>
+
+<body>
+
+    <h1>Movie Rating System</h1>
+
+    <form method="POST" action="/movie">
+
+        <label>Movie Name:</label>
+        <input type="text" name="movie">
+
+        <br><br>
+
+        <label>Rating:</label>
+        <input type="number" name="rating" step="0.1" min="0" max="10">
+
+        <br><br>
+
+        <button type="submit">Check Movie</button>
+
+    </form>
+
+    <% if (result) { %>
+
+        <h2>Movie: <%= movie %></h2>
+
+        <p>Rating: <%= rating %></p>
+
+        <h2>Result: <%= result %></h2>
+
+    <% } %>
+
+</body>
+
+</html>
